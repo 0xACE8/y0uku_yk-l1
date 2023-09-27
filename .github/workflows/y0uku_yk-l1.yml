@@ -24,8 +24,8 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: f33d5.c0nf.d3f4ul7
   CONFIG_FILE: y0uku_yk-l1.c0nf
-  DIY_P1_SH: d1y-p4r71
-  DIY_P2_SH: d1y-p4r71
+  DIY_P1_SH: d1y-p4r71.sh
+  DIY_P2_SH: d1y-p4r72.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   TZ: Asia/Taipei
