@@ -2,14 +2,10 @@
 
 # LEDE Firmware Config
 
-# luci language
-#uci set luci.main.lang=zh_cn
-#uci commit luci
-
 # system
 uci batch <<EOF
 set system.@system[0].hostname='Youku_YK-L1'
-delete system.ntp.enable_server
+delete system.ntp.server
 add_list system.ntp.server="cn.ntp.org.cn"
 add_list system.ntp.server="edu.ntp.org.cn"
 add_list system.ntp.server="ntp.ntsc.ac.cn"
@@ -24,9 +20,6 @@ uci commit turboacc
 
 # fix distfeeds
 sed -i "/ace8/d" /etc/opkg/distfeeds.conf
-sed -i "/passwall_packages/d" /etc/opkg/distfeeds.conf
-sed -i "/passwall2/d" /etc/opkg/distfeeds.conf
-sed -i "/passwall/d" /etc/opkg/distfeeds.conf
 sed -i "/small/d" /etc/opkg/distfeeds.conf
 
 # firewall
