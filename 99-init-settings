@@ -22,7 +22,7 @@ uci commit turboacc
 
 # fix distfeeds
 sed -i "/ace8/d" /etc/opkg/distfeeds.conf
-sed -i "/small/d" /etc/opkg/distfeeds.conf
+sed -i "/kenzo/d" /etc/opkg/distfeeds.conf
 
 # firewall
 uci batch <<EOF
