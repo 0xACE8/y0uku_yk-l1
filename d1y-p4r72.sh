@@ -6,6 +6,7 @@
 #=================================================
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.177.100/g' package/base-files/files/bin/config_generate
+sed -i "s/OpenWrt /0xACE7 build $(TZ=UTC-3 date "+%Y.%m.%d") @ LEDE /g" package/lean/default-settings/files/zzz-default-settings
 
 # Change ash to bash
 sed -i 's/ash/bash/g' package/base-files/files/etc/passwd
