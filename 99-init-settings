@@ -77,6 +77,19 @@ set network.lan6.reqprefix='auto'
 set network.lan6.dns='::1'
 EOF
 uci commit network
+
+# wireless
+uci batch <<EOF
+set wireless.radio0.channel='1'
+set wireless.radio0.country='AU'
+set wireless.radio0.htmode='HT40'
+set wireless.default_radio0.ssid='CMCC-705'
+set wireless.default_radio0.encryption='psk2'
+set wireless.default_radio0.key='_smokeb43_'
+EOF
+uci commit wireless
 /etc/init.d/network restart
+/etc/init.d/ttyd restart
+/etc/init.d/dropbear restart
 
 exit 0
